@@ -74,7 +74,7 @@
 								<br>
 								<br>
 								<br>
-								<li><a href="#daylight" id="daylight-link"><span class="icon fa fa-sun-o">Daylight Optimization</span></a></li>
+								<li><a href="#daylight" id="daylight-link"><span class="icon fa fa-sun-o">Daylight <br> Optimization</span></a></li>
 								<li><a href="#park" id="park-link"><span class="icon fa fa-tree">Urban Park Circulation Optimization</span></a></li>
 								<li><a href="#fab" id="fab-link"><span class="icon fa fa-modx">Fabrication of a Module Based Fluid form</span></a></li>
 								
@@ -120,39 +120,81 @@
 				<!-- Daylight -->
 					<section id="daylight" class="four" >
 					<div class="container" align="left">
-					<header class="major" style="border-bottom: solid #f89191 2px;">
+					<header class="major" style="border-bottom: solid #5a3402 2px;">
 							<h2 style="padding: 0px; margin: 0px;"><i class="fa fa-sun-o"></i> Optimizing the Acquisition of Natural Light in a Residential Complex</h2>
 							</header>
 							<div class="body" align="left">
 							
 									
-									<strong >        First Phase:</strong>
 									<br>
+									<div style="border-bottom: solid #e6ddd2 2px;">									
+										<p align = "justify">
+											This generative optimization effort was part of the dissertation project for my master's degree.
+											The project was to design a residential complex in a 10000㎡ plot in district 5 of Tehran.
+											As follows, We tried to implement Generative Design techniques in the earlier phases of design.
+											<br>
+											<br>
+											This design project's goal, along with all the complexities of any housing project, was to optimize the buildings' natural light acquisition.
+											That quantifiable criterion seemed suitable to harness computers' computational capabilities for exploring the possibilities and choosing from a range of alternatives. 
+											<br>
+											<br>
+											First, we considered a step-by-step framework to break down the earlier decisions of design into different phases.
+											Each phase was defined as a different parametric definition with different objectives and parameters to optimize.
+											<br>
+											<br>
+											<img src="images/proj1/Diagram.png" class=image-center width="100%">
+											<br>										
+										</p>
+									</div>
+									<br>
+									<strong >        First Phase:</strong> 
+									<br>
+									<br>
+									<div>
+										<p align = "justify" style="border-bottom: solid #e6ddd2 2px;">
+											In the first phase, the general distribution of mass and emptiness on the site and its possibilities were probed. A parametric definition in which the site plan was divided into a dynamic number of divisions in both x and y directions was created. Each created block was then given a dynamic height of its own.
+											All this was a setup that could be assessed with the Grasshopper plugin "Ladybug" for the number of hours of direct sunlight the exterior faces of the blocks received.
+											<br>
+											<img src="images/proj1/phase1/proto.png" class=image-center width="100%">
+											<br>
+											Using the Wallacei plugin, those three parameters (number of divisions in x, number of divisions in y, and height of each block) were manipulated and created a solution space of possible outcomes.
+											 The sunlight hours assessment by Ladybug was the objective that was being optimized.
+											 <br>
+											 <img src="images/proj1/phase1/Grashopper-small.png" class=image-center width="100%">
+											 <br>
+											 The solution space created from different permutations of genes (changing parameters of height and division) is so vast that it is extremely calculation-heavy to explore thoroughly.
+											  Therefore an evolutionary algorithm is implemented that creates generations of possible solutions.
+											  The first generation is random, but the later generations are made from crossovers of a percentage of the previous generation that is more fit.
+											  Also, a chance for mutations is added to prevent getting stuck in local optimums.
+											<br>
+											<br>
+											<img src="images/proj1/phase1/phase-1.gif" class=image-center width="100%">	
+											Such a procedure was used to optimize the direct sunlight hours of the exterior faces as a single objective.
+											 Therefore the solution space has one dimension, and the Pareto front is a single solution.
+											 <br>
+											 <br>
+											 As shown in these charts, the overall fitness trend is improving over generations.<br> 
+											<img src="images/proj1/phase1/Average-and-Fitness.png" width="100%" class=image-center  >
+											<br>
+										</p>							
+										
+									</div>	
 
-									<img src="images/pro1-Phase1/phase1/proto.png" class=image-center width="100%">
-									<br>
-									<img src="images/pro1-Phase1/phase1/Grashopper-small.png" class=image-center width="100%">
-									<br>
-									<img src="images/pro1-Phase1/phase1/phase-1.gif" class=image-center width="100%">
-									<br>
-									<br>
-									<img src="images/pro1-Phase1/phase1/Average-and-Fitness.jpg" width="100%" class=image-center style="border-bottom: solid #f89191 2px;" >
-									<br>
-									<br>
+									
 									<br>
 									<br>
 
 									<strong >        Second Phase:</strong>
 									<br>
-									<img src="images/pro1-Phase1/phase2/s-view.png" class=image-center width="100%">
+									<img src="images/proj1/phase2/s-view.png" class=image-center width="100%">
 									<br>
-									<img src="images/pro1-Phase1/phase2/canvas-high2.png" class=image-center width="100%">
+									<img src="images/proj1/phase2/canvas-high2.png" class=image-center width="100%">
 									<br>
-									<img src="images/pro1-Phase1/phase2/phase-2.gif" class=image-center width="100%">
+									<img src="images/proj1/phase2/phase-2.gif" class=image-center width="100%">
 									<br>
-									<img src="images/pro1-Phase1/phase2/Parallel-Coordinate-Plot.jpg" class=image-center width="100%">
+									<img src="images/proj1/phase2/Parallel-Coordinate-Plot.jpg" class=image-center width="100%">
 									<br>
-									<img src="images/pro1-Phase1/phase2/2-pareto.gif" class=image-center width="100%">
+									<img src="images/proj1/phase2/2-pareto.gif" class=image-center width="100%">
 									<br>
 									<br>
 									<br>
